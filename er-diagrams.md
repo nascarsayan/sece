@@ -101,7 +101,7 @@
 <details>
 <summary>Example</summary>
 
----
+
 
 ```mermaid
 erDiagram
@@ -140,7 +140,7 @@ erDiagram
     PUBLICATION }|--|| BOOK_PUBLICATION : hasPublicationDetails
 ```
 
----
+</details>
 
 <!-- https://www.mermaidchart.com/app/projects/21030e5e-873f-4377-bb62-3dae3e10870f/diagrams/b2b98989-b71a-43ac-b539-a27454399c7e/version/v0.1/edit -->
 
