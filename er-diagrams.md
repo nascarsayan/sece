@@ -105,30 +105,39 @@
 
 ```mermaid
 erDiagram
-      BOOK {
-          BookID INT
-          Title VARCHAR
-          Author VARCHAR
-          ISBN VARCHAR
-          PublicationYear INT
-          Quantity INT
-      }
+    BOOK {
+        BookID INT PK
+        Title VARCHAR
+        Author VARCHAR
+        ISBN VARCHAR
+        PublicationYear INT
+        Quantity INT
+    }
 
-      MEMBER {
-          MemberID INT
-          Name VARCHAR
-          ContactDetails VARCHAR
-          MembershipID VARCHAR
-      }
+    PUBLICATION {
+        PublicationID INT PK
+        PublisherName VARCHAR
+        PublicationDate DATE
+    }
 
-      BORROWING {
-          BorrowingID INT
-          BorrowedDate DATE
-          ReturnedDate DATE
-      }
+    CATEGORY {
+        CategoryID INT PK
+        CategoryName VARCHAR
+    }
 
-      BOOK ||--|{ BORROWING : isBorrowed
-      BORROWING }|--|| MEMBER : hasBorrowed
+    BOOK_CATEGORY {
+        BookID INT FK
+        CategoryID INT FK
+    }
+
+    BOOK_PUBLICATION {
+        BookID INT FK
+        PublicationID INT FK
+    }
+
+    BOOK ||--|{ BOOK_CATEGORY : belongsTo
+    BOOK }|--|| BOOK_PUBLICATION : isPublishedBy
+    PUBLICATION }|--|| BOOK_PUBLICATION : hasPublicationDetails
 ```
 
 ---
