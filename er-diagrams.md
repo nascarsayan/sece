@@ -146,3 +146,58 @@ erDiagram
 
 <!-- https://www.mermaidchart.com/app/projects/21030e5e-873f-4377-bb62-3dae3e10870f/diagrams/b2b98989-b71a-43ac-b539-a27454399c7e/version/v0.1/edit -->
 
+---
+
+```mermaid
+classDiagram
+    class Book {
+        +int BookID
+        +String Title
+        +String Author
+        +String ISBN
+        +int PublicationYear
+        +int Quantity
+        +Book()
+        +void addBook()
+        +void updateBook()
+        +void deleteBook()
+        +List<Book> searchBooks(String keyword)
+    }
+
+    class Publication {
+        +int PublicationID
+        +String PublisherName
+        +Date PublicationDate
+        +Publication()
+        +void addPublication()
+        +void updatePublication()
+        +void deletePublication()
+        +List<Publication> searchPublications(String keyword)
+    }
+
+    class Category {
+        +int CategoryID
+        +String CategoryName
+        +Category()
+        +void addCategory()
+        +void updateCategory()
+        +void deleteCategory()
+        +List<Category> searchCategories(String keyword)
+    }
+
+    class Book_Category {
+        +int BookID
+        +int CategoryID
+    }
+
+    class Book_Publication {
+        +int BookID
+        +int PublicationID
+    }
+
+    Book -- Book_Category : belongsTo
+    Book -- Book_Publication : isPublishedBy
+    Publication -- Book_Publication : hasPublicationDetails
+
+```
+
