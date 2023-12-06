@@ -16,3 +16,21 @@ https://dev.mysql.com/downloads/installer/
 
 4. Start the installation process for all of them
 ```
+
+#### Sample Java FX app
+
+https://github.com/nascarsayan/fx
+
+Branches (in order of changes):
+
+```
+initial-code
+clean-code
+login-screen
+next-screen
+students-screen
+connect-database
+add-user
+delete-user
+update-user
+```
