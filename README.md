@@ -34,3 +34,17 @@ add-user
 delete-user
 update-user
 ```
+
+#### Sample code snippets
+
+
+1. Switching scenes - in the event handler method, use the following code. If your FXML file is named `login.fxml`:
+
+    ```java
+    root = FXMLLoader.load(getClass().getResource("login.fxml"));
+    stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+    scene = new Scene(root);
+    stage.setScene(scene);
+    stage.show();
+    ```
+
