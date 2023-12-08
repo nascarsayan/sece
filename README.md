@@ -89,7 +89,7 @@ public class HyperlinkController {
 
     @FXML
     private void openLinkInBrowser(ActionEvent event) {
-        String url = "https://www.openai.com";
+        String url = "https://www.youtube.com";
         hostServices.showDocument(url); // This will open the URL in the default browser
     }
 }
@@ -127,6 +127,6 @@ public class HyperlinkFXMLApp extends Application {
 }
 ```
 
-This example uses FXML to create a simple UI with a `VBox` containing a `Hyperlink`. The `Hyperlink` is connected to a method `openLinkInBrowser` in the controller class (`HyperlinkController`) through `onAction="#openLinkInBrowser"`. When the hyperlink is clicked, the `openLinkInBrowser` method is invoked, which opens OpenAI's website in the default web browser using `HostServices`.
+This example uses FXML to create a simple UI with a `VBox` containing a `Hyperlink`. The `Hyperlink` is connected to a method `openLinkInBrowser` in the controller class (`HyperlinkController`) through `onAction="#openLinkInBrowser"`. When the hyperlink is clicked, the `openLinkInBrowser` method is invoked, which opens Youtube's website in the default web browser using `HostServices`.
 
 Ensure your project structure is set up correctly and the FXML file and controller class are located in the right packages according to your project configuration.
